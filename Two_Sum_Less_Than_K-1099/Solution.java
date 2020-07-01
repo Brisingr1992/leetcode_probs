@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.Map;
-import java.util.HashMap;
 
 public class Solution {
     static int twoSumLessThanK(int[] A, int K) {
