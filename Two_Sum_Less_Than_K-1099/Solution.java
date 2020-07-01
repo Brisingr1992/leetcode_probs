@@ -33,6 +33,30 @@ public class Solution {
         return result > 0 ? result : -1;
     }
 
+    static int twoSumLessThanKCountingSort(int[] A, int K) {
+        int result = -1, lo = 1001, hi = 0;
+        int[] count = new int[1001];
+        for (int x: A) {
+            lo = Math.min(lo, x);
+            hi = Math.max(hi, x);
+            count[x]++;
+        }
+        
+        while (lo < hi) {
+            if (count[lo] == 0) { lo++; continue; }
+            if (count[hi] == 0) { hi--; continue; }
+
+            if (lo + hi >= K) {
+                hi--;
+            } else {
+                result = Math.max(result, lo + hi);
+                lo++;
+            }
+        }
+        
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] A1 = new int[] {34,23,1,24,75,33,54,8};
         int[] A2 = new int[] {10,20,30};
@@ -46,6 +70,9 @@ public class Solution {
         System.out.println(twoSumLessThanK(A2, k2)); // brute force
 
         System.out.println(twoSumLessThanKSort(A1, k1)); // Two Pointers 
-        System.out.println(twoSumLessThanKSort(A2, k2)); // Two Pointers 
+        System.out.println(twoSumLessThanKSort(A2, k2)); // Two Pointers
+
+        System.out.println(twoSumLessThanKCountingSort(A1, k1)); // Counting Sort
+        System.out.println(twoSumLessThanKCountingSort(A2, k2)); // Counting Sort
     }
 }
