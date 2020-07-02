@@ -1,6 +1,10 @@
 # [Problem Description](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
-Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level). Same as [107-level-order-II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
+Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level). 
+
+### Similar Questions
+ [107-level-order-II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
+ [429-N-ary-Tree-Level-Order-Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)
 
 
 
