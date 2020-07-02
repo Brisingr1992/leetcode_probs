@@ -14,11 +14,13 @@ The first entry in the answer is considered to be the top of the deck.
 
 ## Approach
 Think in reverse
+
     - last card to come will be the MAX_VAL card
     - Before that will be second last card, which will have pushed it to last
     - And so on...
 
-eg- [17,13,11,2,3,5,7]
+EXAMPLE: \[17,13,11,2,3,5,7\]
+
     - |17|
     - Add 13 (as we would have removed it first) |13|17|
     - Add 11 (Upon removal 11 would have moved 17 to last),
